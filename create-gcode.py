@@ -30,20 +30,22 @@ PRINT_END = [
     "G90 ; absolute positioning",
     "G28 X0 Y0 ; home X Y",
     "M84 ; disable motors",
+    "G1 Z100 F300 ; move Z to default height",
     ""
 ]
 
 def parse_args():
     p = argparse.ArgumentParser(description="Generate random 3D printer movements (G1) into test.gcode")
-    p.add_argument("--min-x", type=float, required=True, help="Minimum X coordinate")
+    p.add_argument("--min-x", type=float, default=10, help="Minimum X coordinate (default: 10)")
     p.add_argument("--max-x", type=float, required=True, help="Maximum X coordinate")
-    p.add_argument("--min-y", type=float, required=True, help="Minimum Y coordinate")
+    p.add_argument("--min-y", type=float, default=10, help="Minimum Y coordinate (default: 10)")
     p.add_argument("--max-y", type=float, required=True, help="Maximum Y coordinate")
     p.add_argument("--min-z", type=float, help="Minimum Z coordinate (optional)")
     p.add_argument("--max-z", type=float, help="Maximum Z coordinate (optional)")
     p.add_argument("--feedrate", type=float, required=True, help="Feedrate in mm/s")
     p.add_argument("--count", type=int, required=True, help="Number of movement commands to generate")
-    p.add_argument("-p", "--pause", type=int, metavar="MS", help="Pause after each movement in milliseconds (optional, e.g. -p 100)")
+    p.add_argument("-p", "--pause", type=int, metavar="MS", 
+                   help="Pause after each movement in milliseconds (optional, e.g. -p 100)")
     return p.parse_args()
 
 def validate_args(a):
