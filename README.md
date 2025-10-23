@@ -1,7 +1,8 @@
 # printer-movement-generator
 Script to generate random movement commands for testing 3D printers.
 # Usage
-Example for a Voron 2.4 350x350 printer: `python .\create-gcode.py --min-x 50 --max-x 300 --min-y 50 --max-y 300 --feedrate 300 --count 300python .\create-gcode.py --min-x 50 --max-x 300 --min-y 50 --max-y 300 --feedrate 300 --count 300`
+Example for a Voron 2.4 350x350 printer: `python .\create-gcode.py --min-x 50 --max-x 300 --min-y 50 --max-y 300 --feedrate 300 --count 300python .\create-gcode.py --min-x 50 --max-x 300 --min-y 50 --max-y 300 --feedrate 300 --count 300` 
+
 Generate random 3D printer movements (G1) into test.gcode. 
 Use the provided CLI options in the table below to customize your test run. 
  
