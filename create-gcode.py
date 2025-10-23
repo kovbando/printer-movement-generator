@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generates random 3D-printer movement G-code into test.gcode.
-Example for a Voron 2.4 350x350 printer: python .\create-gcode.py --min-x 50 --max-x 300 --min-y 50 --max-y 300 --feedrate 300 --count 300python .\create-gcode.py --min-x 50 --max-x 300 --min-y 50 --max-y 300 --feedrate 300 --count 300
+Example for a Voron 2.4 350x350 printer: python .\create-gcode.py --min-x 50 --max-x 300 --min-y 50 --max-y 300 --feedrate 300 --count 300
 
 Usage (from repo folder):
     python create-gcode.py --min-x 0 --max-x 100 --min-y 0 --max-y 100 --feedrate 50 --count 200
